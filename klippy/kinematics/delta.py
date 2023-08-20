@@ -231,24 +231,24 @@ class DeltaCalibration:
                                       self.abs_endstops, steppos)]
     def save_state(self, configfile):
         # Save the current parameters (for use with SAVE_CONFIG)
-        #configfile.set('printer', 'delta_radius', "%.6f" % (self.radius,))#flsun delete,don't calibrate raduis
+        configfile.set('printer', 'delta_radius', "%.6f" % (self.radius,))#flsun delete,don't calibrate raduis
         for i, axis in enumerate('abc'):
-                #configfile.set('stepper_'+axis, 'angle', "%.6f" % (self.angles[i],))#flsun delete,don't calibrate angle
+                configfile.set('stepper_'+axis, 'angle', "%.6f" % (self.angles[i],))#flsun delete,don't calibrate angle
             configfile.set('stepper_'+axis, 'arm_length',
                            "%.6f" % (self.arms[i],))
             configfile.set('stepper_'+axis, 'position_endstop',
                            "%.6f" % (self.endstops[i],))
         gcode = configfile.get_printer().lookup_object("gcode")
         #flsun delete ,delete the next para ,don't show this info while leveling on web page
-        #gcode.respond_info(
-        #    "stepper_a: position_endstop: %.6f angle: %.6f arm_length: %.6f\n"
-        #    "stepper_b: position_endstop: %.6f angle: %.6f arm_length: %.6f\n"
-        #    "stepper_c: position_endstop: %.6f angle: %.6f arm_length: %.6f\n"
-        #    "delta_radius: %.6f"
-        #    % (self.endstops[0], self.angles[0], self.arms[0],
-        #       self.endstops[1], self.angles[1], self.arms[1],
-        #       self.endstops[2], self.angles[2], self.arms[2],
-        #       self.radius))
+        gcode.respond_info(
+            "stepper_a: position_endstop: %.6f angle: %.6f arm_length: %.6f\n"
+            "stepper_b: position_endstop: %.6f angle: %.6f arm_length: %.6f\n"
+            "stepper_c: position_endstop: %.6f angle: %.6f arm_length: %.6f\n"
+            "delta_radius: %.6f"
+            % (self.endstops[0], self.angles[0], self.arms[0],
+               self.endstops[1], self.angles[1], self.arms[1],
+               self.endstops[2], self.angles[2], self.arms[2],
+               self.radius))
 
 def load_kinematics(toolhead, config):
     return DeltaKinematics(toolhead, config)
