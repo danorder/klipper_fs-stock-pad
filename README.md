@@ -1,5 +1,7 @@
 Flsun default 1.3 branch with tramming aka leveling renabled. so mesh "works" 
-Keep inn mind Klipper screen does not use "probe_calibrate" and, is unable to save "probe offsets" this leads to large "babysteps aka zoffset in mainsail" 
+
+
+Keep in mind Klipper screen does not use "probe_calibrate" and, is unable to save "probe offsets" this leads to large "babysteps aka zoffset in mainsail" 
 it will be required to solve this running the ommand from "terminal/console" in mainsail"  you must type "accept" first before running "save_config" 
 check the bottom of printer.cfg for the new zoffset. 
 -2. you now must run , delta_calibrate to apply the new "probe" offset" and, also "tramm" the effector to the bed. 
