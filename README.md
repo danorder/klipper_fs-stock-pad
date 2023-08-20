@@ -23,11 +23,11 @@ type ssh , pi@speeder-pad.local  or, ssh pi@ipadress.
 
 type ls enter you should see klipper folder 
 
-sudo rm -r klipper
+sudo rm -r klipper enter 
 
-gitclone https://github.com/danorder/klipper_fs-stock-pad.git
+gitclone https://github.com/danorder/klipper_fs-stock-pad.git enter 
 
-sudo service klipper restart
+sudo service klipper restart enter 
 
 Relevel printer carry on. 
  
