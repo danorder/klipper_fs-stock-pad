@@ -9,7 +9,7 @@ The last step is to run bed_mesh.
 this order of events is absolute failure to do so will lead into offsets not being applied or general scrapes / other issues. this is the correct "offical website method" 
 general_disclaimer this is just a quick patch/bandaid. for a quick option/solution 
 
-The recoomend is. to also reinstall "klipperScreen" returning it to normal commands / layout. e.g it has a automated button to set probe_calibrate under "zcalibrate"  click on "probe" to run this. then use the buttons 
+The recomend is. to also to reinstall "klipperScreen" returning it to normal commands / layout. e.g it has a automated button to set probe_calibrate under "zcalibrate"  click on "probe" to run this. then use the buttons 
 to get the correct offset. 
 
 Finally everything else can be left as is avoiding further hastle. 
