@@ -29,7 +29,7 @@ gitclone https://github.com/danorder/klipper_fs-stock-pad.git
 
 sudo service klipper restart
 
-RELEVEL PRINTER CARRY ON. 
+Relevel printer carry on. 
  
 
 
